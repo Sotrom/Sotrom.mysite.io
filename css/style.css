@@ -1,12 +1,66 @@
-body{
-	background-image: url(/images/bgr.jpg);
-color: #fff
+body{background-image: url(/images/bgr.jpg);
+	
+
+font-family: sans-serif;
 }
 .font{
 	font-style: italic;
 	font-weight: lighter;
 
 }
-		
+p{color: #fff;}		
+.warp{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left:0 ;
+	top:0 ;
+	;
+	display: flex;
+	justify-content: center;
+  align-items: center;
+
+}
+.card{
+	width: 500px;
+	height: 300px;
+	position: relative;
+	perspective: 1000px;
+}
+.front{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-image: url(/images/gege.jpg);
+	justify-content: center;
+  align-items: center;
+	transition: 1s;
+	backface-visibility: hidden;
+}
+
+
+
+.back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-image: url(/images/prsf.jpg);
+	transform: rotateY(180deg);
+	justify-content: center;
+    align-items: center;
+	transition: 1s;
+	backface-visibility: hidden;
+}
+.card:hover .front{
+	transform: rotateY(180deg);
+}
+.card:hover .back{
+	transform: rotateY(360deg);
+}
+
 
 
